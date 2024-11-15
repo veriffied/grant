@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMXhG+2T2n0GmUHs7Pf0z3z5IpGZ54g3R5Kn8zO" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: white;
+            border-bottom: 1px solid #ccc;
+        }
+        .logo-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .logo {
+            max-width: 100px;
+            border-radius: 50%;
+            font-weight: bold;
+            margin-left: 800%;
+            border-style: solid;
+            border-color: blue;
+        }
+
+        .top-right-icons {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .burger-menu,
+        .cart-icon {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 24px;
+        }
+        .info-form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+        .info-form input {
+            padding: 10px;
+            margin: 0 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 200px;
+        }
+        .info-form button {
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .info-form button:hover {
+            background-color: #0056b3;
+        }
+        .testimonial-container {
+            padding: 20px;
+        }
+        .likes {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .likes span {
+            margin-right: 10px;
+        }
+        .comments-section {
+            border-top: 1px solid #ccc;
+            padding-top: 10px;
+        }
+        .comment {
+            display: flex;
+            margin-bottom: 15px;
+        }
+        .profile-pic {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .comment-details {
+            background-color: skyblue;
+            border-radius: 5px;
+            padding: 10px;
+            width: 100%;
+        }
+        .comment-text {
+            margin: 0 0 5px 0;
+        }
+        .timestamp {
+            font-size: 12px;
+            color: gray;
+        }
+        .comment-input-container {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .comment-input {
+            flex: 1;
+            padding: 10px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .comment-input button {
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .comment-input button:hover {
+            background-color: #0056b3;
+        }
+        #testimonial-form {
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        #testimonial-form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #testimonial-form p {
+            font-style: italic;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #testimonial-form form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #testimonial-form label {
+            margin-bottom: 5px;
+        }
+
+        #testimonial-form input, 
+        #testimonial-form select, 
+        #testimonial-form textarea {
+            margin-bottom: 15px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #testimonial-form button {
+            padding: 10px;
+            font-size: 18px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #testimonial-form button:hover {
+            background-color: #45a049;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="images/logo.png" alt="Logo" class="logo">
+        </div>
+        <div class="top-right-icons">
+            <button class="burger-menu"><i class="fas fa-bars"></i></button>
+            <button class="cart-icon"><i class="fas fa-shopping-cart"></i></button>
+        </div>
+    </header>
+    
+    <form class="info-form" id="userForm">
+        <section id="testimonial-form">
+            <h2 id="form-heading">Please Fill Out the Information Below to Verify and Approve Your Grant</h2>
+            <p>NOTE: The information you provide must be correct and match. Therefore, you are requested to provide only truthful information, as the money will not be given to you if we discover any lack of sincerity in the data provided.</p>
+        
+            <form action="#" method="POST">
+                <label for="full-name">First and Last Name:</label>
+                <input type="text" id="full-name" name="full-name" required><br>
+        
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required><br>
+        
+                <label for="gender">Male/Female:</label>
+                <select id="gender" name="gender" required><br>
+                    <option value="" disabled selected>Select</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select><br>
+        
+                <label for="status">Status (Married/Single):</label>
+                <select id="status" name="status" required><br>
+                    <option value="" disabled selected>Select</option>
+                    <option value="married">Married</option>
+                    <option value="single">Single</option>
+                </select><br>
+        
+                <label for="cell-number">Cell Number:</label>
+                <input type="tel" id="cell-number" name="cell-number" required><br>
+        
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" min="16" max="120" required><br>
+        
+                <label for="occupation">Occupation:</label>
+                <input type="text" id="occupation" name="occupation" required><br>
+        
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
+        
+                <label for="monthly-income">Monthly Income:</label>
+                <input type="text" id="monthly-income" name="monthly-income" required><br>
+        
+                <label for="reason">Reason for Application:</label>
+                <textarea id="reason" name="reason" rows="4" required></textarea>
+        
+                <button href="payment-form.html" type="submit">Submit Information</button>
+            </form>
+        </section>
+        
+    </form>
+
+    <div class="testimonial-container">
+        <div class="likes">
+            <span>👍</span>
+            <span>♥</span>
+            <span>224K Likes</span>
+        </div>
+        <div class="comments-section" id="commentsSection">
+            <!-- Comments will be dynamically added here -->
+        </div>
+
+        <div class="comment-input-container">
+            <input type="text" id="commentInput" class="comment-input" placeholder="Add a comment..." />
+            <button id="submitComment">Post</button>
+        </div>
+    </div>
+
+    <script>
+          const translations = {
+        en: "Please Fill Out the Information Below to Verify and Approve Your Grant",
+        es: "Por favor, complete la información a continuación para verificar y aprobar su subvención",
+        fr: "Veuillez remplir les informations ci-dessous pour vérifier et approuver votre subvention",
+        de: "Bitte füllen Sie die untenstehenden Informationen aus, um Ihre Förderung zu überprüfen und zu genehmigen",
+        // Add more languages as needed
+    };
+
+    // Function to change the language of the text based on language code
+    function changeTextLanguage(languageCode) {
+        const selectedText = translations[languageCode] || translations['en']; // Default to English
+        document.getElementById('form-heading').innerText = selectedText;
+    }
+
+    // Detect browser's language and change text accordingly
+    const browserLanguage = navigator.language.slice(0, 2); // Get the first two characters (e.g., 'en', 'es', 'fr')
+    changeTextLanguage(browserLanguage); // Call function to change the text
+        document.getElementById("userForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevents form from submitting traditionally
+            window.location.href = "payment-form.html"; // Redirects to payment form
+        });
+        document.getElementById("userForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            window.location.href = "payment-form.html";
+        });
+
+        const commentsSection = document.getElementById('commentsSection');
+
+        // Predefined comments
+        const comments = [
+            { text: "This program really works!", time: "7m ago" },
+            { text: "I got my results within 24 hours.", time: "3m ago" },
+            { text: "Thank you for this amazing opportunity!", time: "1m ago" },
+            { text: "Highly recommended!", time: "now" },
+            { text: "Legit and fast service.", time: "3 sec ago" },
+            { text: "I can't believe how smooth it was.", time: "now" },
+            { text: "Simply the best!", time: "now" }
+        ];
+
+        // Random profile pictures
+        const profilePics = [
+            'https://randomuser.me/api/portraits/thumb/men/1.jpg',
+            'https://randomuser.me/api/portraits/thumb/women/2.jpg',
+            'https://randomuser.me/api/portraits/thumb/men/3.jpg',
+            'https://randomuser.me/api/portraits/thumb/women/4.jpg',
+            'https://randomuser.me/api/portraits/thumb/men/5.jpg',
+            'https://randomuser.me/api/portraits/thumb/women/6.jpg',
+            'https://randomuser.me/api/portraits/thumb/men/7.jpg'
+        ];
+
+        // Function to display comments
+        function displayComments() {
+            comments.forEach((comment, index) => {
+                const commentDiv = document.createElement('div');
+                commentDiv.className = 'comment';
+
+                const profilePic = document.createElement('img');
+                profilePic.src = profilePics[index % profilePics.length]; // Rotate through profile pictures
+                profilePic.alt = 'Profile Picture';
+                profilePic.className = 'profile-pic';
+
+                const commentDetails = document.createElement('div');
+                commentDetails.className = 'comment-details';
+
+                const commentText = document.createElement('p');
+                commentText.className = 'comment-text';
+                commentText.textContent = comment.text;
+
+                const timestamp = document.createElement('span');
+                timestamp.className = 'timestamp';
+                timestamp.textContent = comment.time;
+
+                commentDetails.appendChild(commentText);
+                commentDetails.appendChild(timestamp);
+                commentDiv.appendChild(profilePic);
+                commentDiv.appendChild(commentDetails);
+                commentsSection.appendChild(commentDiv);
+            });
+        }
+
+        // Call the function to display comments
+        displayComments();
+    </script>
+</body>
+</html>

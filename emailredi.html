@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Care Services</title>
+</head>
+<body>
+  <div class="container">
+    <div class="icon">
+      <svg xmlns="http://www.w3.org/2000/svg" class="checkmark" viewBox="0 0 52 52">
+        <circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none"/>
+        <path class="checkmark-check" fill="none" d="M14 27l8 8 16-16"/>
+      </svg>
+    </div>
+    <h1>Payment Successful!</h1>
+    <p>
+      Please click on the email below with your payment screenshot and address to proceed.
+    </p><br>
+    <a href="mailto:zalij014@gmail.com" class="email-button">Click here</a> to continue!!
+  </div>
+</body>
+</html>
+
+
+  <style>
+  /* styles.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #f3f4f6, #e0e7ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #333;
+}
+
+.container {
+  text-align: center;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 400px;
+}
+
+.icon {
+  margin-bottom: 20px;
+}
+
+.checkmark {
+  width: 64px;
+  height: 64px;
+  stroke-width: 2;
+  stroke: #4caf50;
+  stroke-linecap: round;
+  animation: checkmark-animation 0.6s ease-out forwards;
+}
+
+.checkmark-circle {
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  stroke-width: 2;
+  stroke: #4caf50;
+  fill: none;
+  animation: stroke-animation 0.6s ease-out forwards;
+}
+
+.checkmark-check {
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  animation: stroke-animation 0.3s 0.6s ease-out forwards;
+}
+
+@keyframes stroke-animation {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes checkmark-animation {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 16px;
+  color: #6c757d;
+  line-height: 1.6;
+}
+
+.email-button {
+  display: inline-block;
+  background: #007bff;
+  color: white;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+
+.email-button:hover {
+  background: #0056b3;
+}
+
+  </style>
+</body>
+</html>
