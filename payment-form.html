@@ -17,10 +17,8 @@
 <script>
   paypal.HostedButtons({
     hostedButtonId: "4QDZ59SGKYADJ",
-    onApprove: function(data, actions) {
-      // Perform any actions if needed before the redirect, then redirect
-      window.location.href = "emailredi.html";  // Replace with your actual success page URL
-    }
+      onApprove: function(data, actions) {
+      window.location.href = "emailredi.html";
   }).render("#paypal-container-4QDZ59SGKYADJ")
 </script>
 </body>
